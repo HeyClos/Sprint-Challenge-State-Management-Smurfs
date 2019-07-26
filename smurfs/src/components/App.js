@@ -3,6 +3,8 @@ import "./App.css";
 import { connect } from "react-redux";
 
 import { getSmurfs } from "../actions/index"
+import SmurfForm from "./SmurfForm"
+import SmurfList from "./SmurfList"
 
 class App extends Component {
   constructor () {
@@ -23,7 +25,8 @@ class App extends Component {
         <div>Welcome to your state management version of Smurfs!</div>
         <div>Start inside of your `src/index.js` file!</div>
         <div>Have fun!</div>
-        <li>{smurfs.name}</li>
+        <SmurfList {...this.props} smurfs={this.props.smurfs} />
+        <SmurfForm {...this.props} addSmurf={this.props.addSmurf} />
       </div>
     );
   }
