@@ -3,13 +3,14 @@ import { useState } from 'react';
 
 const SmurfForm = () => {
 
-    const [smurfName, setSmurfName] = useState(0);
-    const [smurfAge, setSmurfAge] = useState(0);
-    const [smurfHeight, setSmurfHeight] = useState(0);
+    const [smurfName, setSmurfName] = useState("");
+    const [smurfAge, setSmurfAge] = useState("");
+    const [smurfHeight, setSmurfHeight] = useState("");
 
     return (
         <div>
-            <form onSubmit={this.handleInputChange}>
+            <form >
+            {/* onSubmit={this.handleInputChange} */}
                 <input
                     onChange={(event)=>{
                         console.log(event)}
@@ -19,18 +20,25 @@ const SmurfForm = () => {
                     name="name"
                 />
                 <input
-                    onChange={this.changeHandler}
+                    onChange={(event)=>{
+                        console.log(event)}
+                    }
                     placeholder="age"
                     value={smurfAge}
                     name="age"
                 />
                 <input
-                    onChange={this.changeHandler}
+                    onChange={(event)=>{
+                        console.log(event)}
+                    }
                     placeholder="height"
                     value={smurfHeight}
                     name="height"
                 />
-                <button type="submit">Add to the village</button>
+                <button type="submit" >
+                {/* onClick={()=> props.buyItem(props.feature)} */}
+                    Add to the village
+                </button>
             </form>
         </div>
     )

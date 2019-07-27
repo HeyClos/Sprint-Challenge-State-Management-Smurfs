@@ -1,7 +1,7 @@
 import { FETCH_SMURFS_START, FETCH_SMURFS_SUCCESS, FETCH_SMURFS_ERROR } from '../actions';
 
 const initialState = {
-    smurfs: [],
+    smurfs: null,
     isLoading: false,
     error: null
 }
